@@ -1,0 +1,71 @@
+body {
+    margin: 0px;
+}
+
+.carousel{
+    overflow: scroll;
+    padding:30px;
+    position:relative;
+    width: 100%;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 5px;
+}
+
+.carousel::-webkit-scrollbar {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.carousel__container{
+    margin: 70px 0px;
+    padding-bottom: 10px ;
+    white-space: nowrap;
+}
+
+.carusel-item{
+    background-color: violet;
+    border-radius: 30px;
+    cursor: pointer;
+    display: inline-block;
+    height: 250px;
+    margin-right: 10px ;
+    overflow: hidden;
+    position: relative;
+    transition: 450ms all;
+    transform-origin: center left;
+    width: 200px;
+}
+
+.carusel-item:hover~.carusel-item{
+    transform: translate3d(100px, 0, 0);
+}
+
+.carousel__container:hover .carusel-item{
+    opacity: 0.3;
+}
+
+.carousel__container:hover .carusel-item:hover{
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+.carusel-item__img{
+    width:200px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.carusel-item__details{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.9) 100%);
+    font-size: 10px;
+    opacity: 0;
+    transition: 450ms opacity;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
